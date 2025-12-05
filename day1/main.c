@@ -29,10 +29,8 @@ int shift(char chars[]) {
   char ss[10];
   int result = 0;
   strncpy(ss, chars + 1, strlen(chars) - 2);
-  if (chars[0] == 'R') {
-    result = atoi(ss);
-  } else {
-    result = atoi(ss);
+  result = atoi(ss);
+  if (chars[0] == 'L') {
     result *= (-1);
   }
   return result;
