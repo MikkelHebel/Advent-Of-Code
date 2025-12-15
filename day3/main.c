@@ -26,8 +26,11 @@ int findJoltage(char line[]) {
     for (int j = i + 1; j < strlen(line); j++) {
       int y = line[j] - '0';
       int temp = (10 * x) + y;
+      if (temp == 99) {
+        return 99;
+      }
       if (temp > max_joltage) {
-        max_joltage = (10 * x) + y;
+        max_joltage = temp;
       }
     }
   }
